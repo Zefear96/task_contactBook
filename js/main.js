@@ -30,7 +30,7 @@ function render(data = getContactsFromStorage()) {
               container.innerHTML += `
               <div class="card w-25 m-2" style="width: 18rem;" id = "${item.id}">
                      <img src="${item.url}" class="card-img-top" alt="error:(" height = "250">
-                     <div class="card-body">
+                     <div class="card-body bg-info bg-opacity-25">
                             <h5 class="card-title">${item.name}</h5>
                             <hr>
                             <p class="card-text"><b>Phone:</b> ${item.phone}</p>
@@ -38,10 +38,11 @@ function render(data = getContactsFromStorage()) {
                             <p class="card-text"><b>Email:</b> ${item.email}</p>
                             <hr>
                             <p class="card-text"><b>Address:</b> ${item.address}</p>
-                            <a href="#" class="btn btn-danger delete-contact-btn">Delete</a>
-                            <a href="#" class="btn btn-secodary update-contact-btn"    
+                            <hr>
+                            <a href="#" class="btn btn-danger delete-contact-btn">Delete <i class="bi bi-trash"></i></a>
+                            <a href="#" class="btn btn-warning update-contact-btn"    
                             data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">Update</a>
+                            data-bs-target="#staticBackdrop">Update <i class="bi bi-gear"></i></a>
                      </div>
             </div>`;
        });
